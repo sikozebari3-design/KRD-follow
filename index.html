@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>KRD Follow | زێدەکرنا فۆڵۆوەر و لایکا - خزمەتگۆزاریێن سۆشیال میدیا</title>
+    <meta name="description" content="KRD Follow - باشترین سەکۆ بۆ زێدەکرنا فۆڵۆوەر، لایک و بینەران بۆ ئینستاگرام، تیکتۆک و فەیسبۆک ب نرخەکێ هەرزان. ئەرزانترین سێرڤس ل دەف مە بەردەستە.">
+    <meta name="keywords" content="KRD, Follower, Like, TikTok, Instagram, Facebook, زیادکرنا فۆڵۆوەر, لایک, تیکتۆک, ئینستاگرام, فەیسبۆک, کڕینا فۆڵۆوەر, سۆشیال میدیا">
+    <meta name="author" content="KRD Follow">
+    <link rel="canonical" href="https://s1kosocial.netlify.app">
+    
+    <meta property="og:title" content="KRD Follow - ROYAL EDITION">
+    <meta property="og:description" content="خزمەتگۆزاریێن سۆشیال میدیایێ ب کوالێتیەکا بلند و نرخەکێ گونجای.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* KRD MODERN ROYAL GLASS DESIGN
+           COLOR PALETTE: DEEP BLACK, ROYAL PINK, GOLD
+        */
+        :root {
+            --primary: #ff2d55;
+            --secondary: #ffae00;
+            --glass-bg: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --bg-deep: #0a0c10;
+            --text-white: #ffffff;
+            --text-dim: #b0b0b0;
+            --success: #4caf50;
+            --error: #ff4b2b;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px var(--primary); }
+            50% { box-shadow: 0 0 20px var(--primary); }
+            100% { box-shadow: 0 0 5px var(--primary); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* --- Base Styles --- */
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Segoe UI', 'Kurdish Font', 'Arial', sans-serif;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(255, 45, 85, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 174, 0, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-white);
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main-interface {
+            padding-bottom: 110px; 
+        }
+
+        .glass-box {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* --- ENHANCED LOGIN & SIGNUP SECTION --- */
+        #auth-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .auth-logo-area {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .auth-logo-circle {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 25px; /* Squircle style */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            margin: 0 auto 15px;
+            box-shadow: 0 10px 30px rgba(255, 45, 85, 0.4);
+            transform: rotate(-10deg);
+        }
+
+        .auth-title {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fff;
+            margin: 0;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 400px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Shine effect on card */
+        .auth-card::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.03), transparent);
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+
+        .auth-card h2 {
+            margin-bottom: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 18px;
+            text-align: right;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 8px;
+            margin-right: 5px;
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            font-size: 16px;
+            z-index: 2;
+        }
+
+        .modern-input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 14px 45px 14px 15px;
+            color: white;
+            outline: none;
+            font-size: 15px;
+            text-align: right;
+            transition: all 0.4s ease;
+        }
+
+        .modern-input:focus {
+            border-color: var(--primary);
+            background: rgba(255, 45, 85, 0.05);
+            box-shadow: 0 0 20px rgba(255, 45, 85, 0.15);
+        }
+
+        .btn-royal {
+            width: 100%;
+            padding: 16px;
+            border-radius: 18px;
+            border: none;
+            background: linear-gradient(135deg, var(--primary), #ff5e7d);
+            color: white;
+            font-weight: 800;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(255, 45, 85, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .btn-royal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 45, 85, 0.5);
+        }
+
+        .btn-royal:active {
+            transform: scale(0.96);
+        }
+
+        .auth-footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        .auth-footer span.link {
+            color: var(--secondary);
+            font-weight: 800;
+            cursor: pointer;
+            padding: 5px 10px;
+            background: rgba(255, 174, 0, 0.1);
+            border-radius: 8px;
+            margin-right: 5px;
+        }
+
+        /* --- DASHBOARD SECTION --- */
+        .welcome-hero {
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .service-card {
+            padding: 30px 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* --- ORDER FORMS --- */
+        .page-view {
+            display: none;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .nav-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn-back {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .item-row {
+            padding: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .service-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .delivery-badge {
+            font-size: 10px;
+            background: rgba(255, 174, 0, 0.2);
+            color: var(--secondary);
+            padding: 2px 8px;
+            border-radius: 10px;
+            width: fit-content;
+        }
+
+        .guarantee-badge {
+            font-size: 10px;
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+            padding: 2px 8px;
+            border-radius: 10px;
+            width: fit-content;
+            margin-top: 3px;
+        }
+
+        .buy-count-tag {
+            font-size: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 10px;
+            color: var(--text-dim);
+            margin-top: 3px;
+        }
+
+        /* --- DEPOSIT --- */
+        .deposit-card {
+            padding: 35px 25px;
+            text-align: center;
+        }
+
+        .pay-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .pay-box {
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .pay-box.active {
+            border-color: var(--primary);
+            background: rgba(255, 45, 85, 0.1);
+        }
+
+        .pay-box img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 8px;
+        }
+
+        /* --- BOTTOM NAV --- */
+        .navbar {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            height: 75px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-item {
+            color: var(--text-dim);
+            text-align: center;
+            font-size: 11px;
+            cursor: pointer;
+            flex: 1;
+        }
+
+        .nav-item i {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .nav-item.active {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* --- PROFILE (ENHANCED STYLING) --- */
+        .pfp-main {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 25px;
+            border: 4px solid var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            color: var(--secondary);
+            background: rgba(255, 174, 0, 0.05);
+            box-shadow: 0 0 25px rgba(255, 174, 0, 0.2);
+            position: relative;
+        }
+        
+        .pfp-main::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            background: #4caf50;
+            border: 3px solid var(--bg-deep);
+            border-radius: 50%;
+        }
+
+        .balance-box {
+            padding: 30px;
+            margin-bottom: 25px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 45, 85, 0.15), rgba(255, 174, 0, 0.05));
+            border: 1px solid rgba(255, 174, 0, 0.1);
+        }
+
+        .lang-btn {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid var(--glass-border);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .lang-btn.active {
+            border-color: var(--secondary);
+            background: rgba(255, 174, 0, 0.1);
+            color: var(--secondary);
+        }
+
+        /* --- ADMIN PANEL STYLE --- */
+        .admin-area {
+            display: none;
+            padding: 25px;
+            margin-top: 25px;
+            border: 2px solid var(--secondary);
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .admin-section-title {
+            color: var(--secondary);
+            font-size: 18px;
+            margin: 25px 0 10px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 5px;
+            text-align: right;
+        }
+
+        .user-list-item {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.05);
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        /* Status Bars */
+        .order-card {
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .progress-container {
+            height: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            transition: 1s ease;
+        }
+
+        .req-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        /* Siraj Section (REFINED) */
+        .siraj-box {
+            margin-top: 20px;
+            padding: 25px;
+            border: 1px solid rgba(255, 174, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 174, 0, 0.1), transparent);
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .siraj-box::before {
+            content: '\f121';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: -10px;
+            bottom: -10px;
+            font-size: 80px;
+            opacity: 0.05;
+            color: var(--secondary);
+            transform: rotate(15deg);
+        }
+
+        .siraj-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        .siraj-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--secondary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #000;
+            box-shadow: 0 5px 15px rgba(255, 174, 0, 0.3);
+        }
+        .siraj-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        .tag {
+            font-size: 11px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid var(--glass-border);
+            color: var(--text-white);
+        }
+
+        .motto-card {
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            border-left: 5px solid var(--primary);
+            background: rgba(255, 45, 85, 0.05);
+        }
+        .motto-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .online { background-color: #4caf50; box-shadow: 0 0 5px #4caf50; }
+        .offline { background-color: #bbb; }
+    </style>
+</head>
+<body onload="initApp()">
+
+<div id="auth-screen">
+    <div id="auth-page">
+        <div class="auth-logo-area">
+            <div class="auth-logo-circle">
+                <i class="fa-solid fa-bolt-lightning"></i>
+            </div>
+            <h1 class="auth-title">KRD Follow</h1>
+            <p style="font-size: 13px; margin-top: 10px; color: var(--text-dim); letter-spacing: 1px;">ROYAL QUALITY SERVICES</p>
+        </div>
+
+        <div class="glass-box auth-card" id="login-form">
+            <h2 id="l_title"><i class="fa-solid fa-fingerprint" style="color:var(--secondary)"></i> بخێرهاتی بۆ هەژمارا تە</h2>
+            
+            <div class="input-group">
+                <label>ناڤێ بکارئینەری</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user-ninja"></i>
+                    <input type="text" id="l-user" class="modern-input" placeholder="ناڤێ خۆ بنڤیسە">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>پەیڤا نهێنی</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <input type="password" id="l-pass" class="modern-input" placeholder="••••••••">
+                </div>
+            </div>
+
+            <button class="btn-royal" onclick="handleLogin()">
+                <span id="l_btn">چوونەژوورێ</span>
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+
+            <div class="auth-footer">
+                <span id="l_no_acc">هەژمارا تە نینە؟</span> 
+                <span onclick="switchAuth('reg')" class="link" id="l_reg_link">دروست بکە</span>
+            </div>
+        </div>
+
+        <div class="glass-box auth-card" id="reg-form" style="display: none;">
+            <h2 id="r_title"><i class="fa-solid fa-user-plus" style="color:var(--secondary)"></i> دروستکرنا هەژمارەکا نوو</h2>
+            
+            <div class="input-group">
+                <label>ناڤێ بکارئینەری یێ نوو</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-id-badge"></i>
+                    <input type="text" id="r-user" class="modern-input" placeholder="ناڤەکێ ب هێز هەلبژێرە">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>پەیڤا نهێنی</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="r-pass" class="modern-input" placeholder="کێمتر نەبیت ژ ٦ پیتان">
+                </div>
+            </div>
+
+            <button class="btn-royal" onclick="handleRegister()">
+                <span id="r_btn">تۆمارکرن و دەستپێکرن</span>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+
+            <div class="auth-footer">
+                <span id="r_have_acc">هەژمارا تە هەیە؟</span> 
+                <span onclick="switchAuth('login')" class="link" id="r_log_link">بچۆ ژوورێ</span>
+            </div>
+        </div>
+
+        <div class="container" style="padding: 0 20px;">
+            <div class="glass-box motto-card">
+                <p>"KRD Follow نە بتنێ پلاتفۆرمەک بو زێدەکرنا ژمارانە، بەلکو دەستپێکا مەزنبونا براندێ تە یە ل جیهانا دیجیتاڵی دا."</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main-interface" style="display: none;">
+    
+    <div id="tab-home" class="container">
+        <div id="home-view">
+            <div class="glass-box welcome-hero">
+                <h3 style="color: var(--secondary); margin-top: 0;"><i class="fa-solid fa-wand-magic-sparkles"></i> <span id="h_head">بەشێ سۆشیالێ</span></h3>
+                <p style="font-size: 14px; opacity: 0.8;" id="h_sub"></p>
+                <div style="font-size: 11px; color: var(--primary); font-weight: bold; margin-top: 10px;">خزمەتگۆزاریێن مە خێراترین و باوەرپێکریترینن</div>
+            </div>
+
+            <div class="services-grid">
+                <div class="glass-box service-card" onclick="openCategory('fb')">
+                    <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
+                    <span id="s_fb">فەیسبۆک</span>
+                </div>
+                <div class="glass-box service-card" onclick="openCategory('ig')">
+                    <i class="fa-brands fa-instagram" style="color: #e4405f;"></i>
+                    <span id="s_ig">ئینستاگرام</span>
+                </div>
+                <div class="glass-box service-card" onclick="openCategory('tk')">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <span id="s_tk">تیکتۆک</span>
+                </div>
+                <div class="glass-box service-card" onclick="openCategory('tg')">
+                    <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+                    <span id="s_tg">تیلیگرام</span>
+                </div>
+            </div>
+
+            <div class="glass-box" style="margin-top: 25px; padding: 20px;">
+                <h4 style="margin:0 0 10px 0; color: var(--secondary);"><i class="fa-solid fa-circle-question"></i> بوچی KRD Follow؟</h4>
+                <p style="font-size: 12px; line-height: 1.6; color: var(--text-dim);">
+                    ئەم ل ڤێرەین دا کو هاریکاریا تە بکەین بگەی بەو ئارمانجێن تە دڤێن. بکارئینانا سێرڤسێن مە، تو دێ شێی د دەمەکێ کێم دا ناڤ و دەنگیەکا باش پەیدا بکەی و باوەریێ ل دەف فۆڵۆوەرێن خو دروست بکەی.
+                </p>
+            </div>
+        </div>
+
+        <div id="category-view" class="page-view">
+            <div class="nav-top">
+                <div class="glass-box btn-back" onclick="closeCategory()"><i class="fa-solid fa-arrow-right"></i></div>
+                <h2 id="cat-label">Category</h2>
+            </div>
+            <div id="items-list"></div>
+        </div>
+
+        <div id="order-view" class="glass-box page-view" style="padding: 25px; margin-top: 20px;">
+            <h3 id="order-name" style="color: var(--primary); margin-top: 0;">Service Name</h3>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 13px;">
+                <span id="order-id" style="opacity: 0.6;">ID: 0</span>
+                <span><span id="o_price_lab">بها</span>: <b id="order-rate" style="color: var(--secondary);">0</b> IQD / 1k</span>
+            </div>
+            <input type="text" id="inp-link" class="modern-input" placeholder="لینکێ فۆڵۆ یان پۆستی لێرە دابنێ">
+            <input type="number" id="inp-qty" class="modern-input" placeholder="چەند دانە؟ (کێمتر نینە ژ 1000)" oninput="calculateTotal()" style="margin-top: 15px;">
+            
+            <div style="text-align: center; margin: 20px 0; font-weight: bold;">
+                <span id="o_total_lab">کۆمە تێچوو</span>: <span id="total-val" style="color: #4caf50; font-size: 20px;">0</span> <span id="o_curr">دینار</span>
+            </div>
+            
+            <button class="btn-royal" onclick="submitOrder()">
+                <span id="o_btn">پشتڕاستکرن</span>
+                <i class="fa-solid fa-check-double"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="tab-orders" class="container" style="display: none;">
+        <h2 style="text-align: center; margin-bottom: 30px;"><i class="fa-solid fa-list-check"></i> <span id="ord_title">داخوازیێن من</span></h2>
+        <div id="my-orders-list"></div>
+    </div>
+
+    <div id="tab-deposit" class="container" style="display: none;">
+        <div class="glass-box deposit-card">
+            <i class="fa-solid fa-wallet" style="font-size: 50px; color: var(--primary); margin-bottom: 15px;"></i>
+            <h2 id="d_title">زێدەکرنا بالانسی</h2>
+            <p style="font-size: 12px; margin-bottom: 20px; color: var(--text-dim);">پشتى پارەی دفرێژى، وێنێ پسۆلێ بنێرە بۆ ئەدمینی</p>
+            
+            <div class="glass-box" style="padding: 20px; margin: 20px 0;">
+                <input type="number" id="dep-amount" value="5000" style="background:none; border:none; color:white; font-size:32px; font-weight:900; width:100%; text-align:center; outline:none;">
+                <div style="font-size: 12px; color: var(--text-dim); margin-top: 5px;" id="d_min">کێمترین بڕ 5,000 دینارە</div>
+            </div>
+
+            <div class="pay-options">
+                <div class="pay-box active" id="p-fast" onclick="selectPay('FastPay')">
+                    <img src="https://fast-pay.cash/wp-content/uploads/2021/04/cropped-fastpay-logo-1.png" alt="FastPay">
+                    <span>FastPay</span>
+                </div>
+                <div class="pay-box" id="p-korek" onclick="selectPay('Korek')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Korek_Telecom_logo.png" alt="Korek">
+                    <span>Korek</span>
+                </div>
+                <div class="pay-box" id="p-fib" onclick="selectPay('FIB')">
+                    <img src="https://fib.iq/assets/img/fib-logo.png" alt="FIB">
+                    <span>FIB</span>
+                </div>
+            </div>
+
+            <button onclick="requestDep('wa')" class="btn-royal" style="background:#25D366; margin-bottom:12px;"><i class="fa-brands fa-whatsapp"></i> <span id="d_wa">واتساپ</span></button>
+            <button onclick="requestDep('tg')" class="btn-royal" style="background:#0088cc;"><i class="fa-brands fa-telegram"></i> <span id="d_tg">تیلیگرام</span></button>
+        </div>
+    </div>
+
+    <div id="tab-profile" class="container" style="display: none;">
+        <div class="glass-box pfp-main" onclick="accessAdmin()">
+            <i class="fa-solid fa-crown"></i>
+        </div>
+        
+        <div style="text-align:center; margin-bottom: 20px;">
+            <h2 id="display-user-name" style="margin:0; color: var(--secondary); font-size: 24px;">بکارئینەر</h2>
+            <p style="margin:5px 0 0; font-size: 12px; color: var(--text-dim);">بخێرهاتی بۆ هەژمارا تە یا شاهانە</p>
+        </div>
+
+        <div class="glass-box balance-box">
+            <div style="font-size: 13px; opacity: 0.7;" id="p_bal_lab">کۆمە بالانسێ تە</div>
+            <h1 style="font-size: 40px; margin: 5px 0;"><span id="ui-bal">0</span> <small style="font-size: 14px;">IQD</small></h1>
+        </div>
+
+        <div class="glass-box siraj-box">
+            <div class="siraj-header">
+                <div class="siraj-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div>
+                    <h3 style="margin:0; color: var(--secondary);">سیراج زێباری</h3>
+                    <p style="margin:0; font-size:12px; opacity:0.7;">گەشەپێدەر و خودانکار</p>
+                </div>
+            </div>
+            <p style="font-size: 13px; line-height: 1.6; margin: 10px 0; position: relative; z-index: 2;">
+                 ئێکە ژ گەنجێن خودان شیان د بوارێ تەکنەلۆژیایێ دا، کو بەردەوام هەوڵ ددەت باشترین خزمەتگۆزاری پێشکەشی بکارئینەران بکەت. ئەو ب جوانی و وردی د کارێن خۆ دا دهێتە نیاسین..
+            </p>
+            <div class="siraj-tags">
+                <span class="tag"><i class="fa-solid fa-star"></i> داهێنەر</span>
+                <span class="tag"><i class="fa-solid fa-shield-halved"></i> متمانەپێکری</span>
+                <span class="tag"><i class="fa-solid fa-bolt"></i> خێرا</span>
+            </div>
+        </div>
+
+        <div id="admin-panel" class="glass-box admin-area">
+            <h3 style="color: var(--secondary); text-align: center; border-bottom: 2px solid var(--secondary); padding-bottom: 10px;">KRD ADMIN CONTROL</h3>
+            
+            <div class="admin-section-title">زێدەکرنا پارەی</div>
+            <input type="text" id="adm-user" class="modern-input" placeholder="ناڤێ بکارئینەری" style="margin-bottom: 10px;">
+            <input type="number" id="adm-amt" class="modern-input" placeholder="بڕێ پارەی (نموونە: 5000)" style="margin-bottom: 10px;">
+            <button class="btn-royal" style="background: var(--success);" onclick="adminAddMoney()">Update Balance</button>
+            
+            <div class="admin-section-title">داخوازیێن گشتی (دوماهیک ۱۰)</div>
+            <div id="admin-request-list" style="max-height: 250px; overflow-y: auto; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.1); padding: 10px; border-radius: 15px;">
+                <p style="text-align:center; font-size:12px; opacity:0.5;">چاوەڕێ بکە...</p>
+            </div>
+            
+            <div class="admin-section-title">لیستا بکارئینەران</div>
+            <div id="admin-user-list" style="max-height: 150px; overflow-y: auto;">
+                 <p style="text-align:center; font-size:12px; opacity:0.5;">بار دەبێت...</p>
+            </div>
+            
+            <button class="btn-royal" style="margin-top: 20px; background: rgba(255,255,255,0.1);" onclick="document.getElementById('admin-panel').style.display='none'">داخستن</button>
+        </div>
+
+        <div class="glass-box" style="padding: 20px; margin-bottom: 20px; margin-top: 20px;">
+            <h4 style="margin: 0 0 15px 0;"><i class="fa-solid fa-language"></i> <span id="p_lang_title">گۆهۆڕینا زمانی</span></h4>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="setLang('badini')" id="btn_badini" class="lang-btn">بادینی</button>
+                <button onclick="setLang('sorani')" id="btn_sorani" class="lang-btn">سۆرانی</button>
+            </div>
+        </div>
+
+        <button onclick="logout()" class="btn-royal" style="background: rgba(255,45,85,0.1); border: 1px solid var(--primary); color: var(--primary); margin-top: 15px;"><span id="p_logout">دەرکەفتن</span> <i class="fa-solid fa-power-off"></i></button>
+
+        <div class="glass-box" style="padding: 20px; margin-top: 30px; font-size: 12px; color: var(--text-dim);">
+            <h4 style="color: var(--primary); margin-top: 0;" id="pol_title">یاسا و مەرجێن مە</h4>
+            <ul id="policy-list" style="padding-right: 20px;">
+                <li id="pol_1">ئەم بەرپرس نین ژ هەر خەلەتیەکا د لینکى دا.</li>
+                <li id="pol_2">زڤراندنا پاران نینە پشتی داوا دهێتە کرن.</li>
+                <li id="pol_3">ب بکارئینانا مە تۆ ل سەر هەمی مەرجان ڕازی دبی.</li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="glass-box navbar">
+        <div id="nav-home" class="nav-item active" onclick="navigate('home')">
+            <i class="fa-solid fa-icons"></i><br><span id="n_social">سۆشیال</span>
+        </div>
+        <div id="nav-orders" class="nav-item" onclick="navigate('orders')">
+            <i class="fa-solid fa-rocket"></i><br><span id="n_orders">داخوازی</span>
+        </div>
+        <div id="nav-deposit" class="nav-item" onclick="navigate('deposit')">
+            <i class="fa-solid fa-circle-plus"></i><br><span id="n_dep">زێدەکرن</span>
+        </div>
+        <div id="nav-profile" class="nav-item" onclick="navigate('profile')">
+            <i class="fa-solid fa-user-tie"></i><br><span id="n_prof">هەژمار</span>
+        </div>
+    </nav>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script>
+    const firebaseConfig = { databaseURL: "https://sikosocial-default-rtdb.firebaseio.com/" };
+    
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    const database = firebase.database();
+
+    let activeUser = "";
+    let bal = 0;
+    let myOrders = [];
+    let method = "FastPay";
+    let curLang = localStorage.getItem("krd_lang") || "badini";
+
+    const langData = {
+        badini: {
+            l_title: "بخێرهاتی بۆ هەژمارا تە", l_btn: "چوونەژوورێ", l_no_acc: "هەژمارا تە نینە؟", l_reg_link: "دروست بکە",
+            r_title: "دروستکرنا هەژمارەکا نوو", r_btn: "تۆمارکرن", r_have_acc: "هەژمارا تە هەیە؟", r_log_link: "بچۆ ژوورێ",
+            h_head: "بەشێ سۆشیالێ", h_sub: "",
+            s_fb: "فەیسبۆک", s_ig: "ئینستاگرام", s_tk: "تیکتۆک", s_tg: "تیلیگرام",
+            o_price_lab: "بها", o_total_lab: "کۆمە تێچوو", o_curr: "دینار", o_btn: "پشتڕاستکرن",
+            ord_title: "داخوازیێن من", d_title: "زێدەکرنا بالانسی", d_min: "کێمترین بڕ 5,000 دینارە", d_wa: "واتساپ", d_tg: "تیلیگرام",
+            p_bal_lab: "کۆمە بالانسێ تە", p_lang_title: "گۆهۆڕینا زمانی", p_logout: "دەرکەفتن",
+            pol_title: "یاسا و مەرجێن مە", pol_1: "ئەم بەرپرس نین ژ هەر خەلەتیەکا د لینکى دا.", pol_2: "زڤراندنا پاران نینە پشتی داوا دهێتە کرن.", pol_3: "ب بکارئینانا مە تۆ ل سەر هەمی مەرجان ڕازی دبی.",
+            n_social: "سۆشیال", n_orders: "داخوازی", n_dep: "زێدەکرن", n_prof: "هەژمار",
+            err_min_qty: "کێمترین بڕ بۆ داواکرنێ 1,000 دانەیە!"
+        },
+        sorani: {
+            l_title: "بەخێرهاتی بۆ هەژمارەکەت", l_btn: "چوونەژوورەوە", l_no_acc: "هەژمارەت نییە؟", l_reg_link: "دروست بکە",
+            r_title: "دروستکردنی هەژمارێکی نوێ", r_btn: "تۆمارکردن", r_have_acc: "هەژمارەت هەیە؟", r_log_link: "بەچۆ ژوورەوە",
+            h_head: "بەشی سۆشیال", h_sub: "",
+            s_fb: "فەیسبووک", s_ig: "ئینستاگرام", s_tk: "تیکتۆک", s_tg: "تێلێگرام",
+            o_price_lab: "نرخ", o_total_lab: "کۆی تێچوو", o_curr: "دینار", o_btn: "پشتڕاستکردنەوە",
+            ord_title: "داواکارییەکانم", d_title: "زیادکردنی باڵانس", d_min: "کەمترین بڕ 5,000 دینارە", d_wa: "واتساپ", d_tg: "تێلێگرام",
+            p_bal_lab: "کۆی باڵانسی تۆ", p_lang_title: "گۆڕینی زمان", p_logout: "چوونە دەرەوە",
+            pol_title: "یاسا و مەرجەکانی ئێمە", pol_1: "ئێمە بەرپرسیار نین لە هەر هەڵەیەک لە لینکەکەدا.", pol_2: "گەڕانەوەی پارە نییە دوای ئەوەی داواکاری دەکرێت.", pol_3: "بە بەکارهێنانی ئێمە تۆ لەسەر هەموو مەرجەکان ڕازیت.",
+            n_social: "سۆشیال", n_orders: "داواکاری", n_dep: "زیادکردن", n_prof: "هەژمار",
+            err_min_qty: "کەمترین بڕ بۆ داواکردن 1,000 دانەیە!"
+        }
+    };
+
+    function setLang(l) {
+        curLang = l;
+        localStorage.setItem("krd_lang", l);
+        applyLanguage();
+    }
+
+    function applyLanguage() {
+        const d = langData[curLang];
+        if(!d) return;
+        Object.keys(d).forEach(key => {
+            let el = document.getElementById(key);
+            if(el) el.innerText = d[key];
+        });
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        let targetBtn = document.getElementById('btn_' + curLang);
+        if(targetBtn) targetBtn.classList.add('active');
+    }
+
+    function initApp() {
+        applyLanguage();
+        let session = localStorage.getItem("krd_session");
+        if(session) loadUser(session);
+    }
+
+    function switchAuth(mode) {
+        const login = document.getElementById('login-form');
+        const reg = document.getElementById('reg-form');
+        
+        if(mode === 'reg') {
+            login.style.opacity = '0';
+            setTimeout(() => {
+                login.style.display = 'none';
+                reg.style.display = 'block';
+                reg.style.opacity = '1';
+            }, 300);
+        } else {
+            reg.style.opacity = '0';
+            setTimeout(() => {
+                reg.style.display = 'none';
+                login.style.display = 'block';
+                login.style.opacity = '1';
+            }, 300);
+        }
+    }
+
+    function handleRegister() {
+        let u = document.getElementById('r-user').value.trim();
+        let p = document.getElementById('r-pass').value.trim();
+        
+        if(u.length < 3) return alert("ناڤ زۆر کورتە! کێمتر نەبیت ژ ٣ پیتان.");
+        if(p.length < 6) return alert("پەیڤا نهێنی زۆر کورتە! پێدڤییە کێمتر نەبیت ژ ٦ نیشانان.");
+        
+        database.ref('users/' + u).once('value', (snap) => {
+            if(snap.exists()) {
+                alert("ئەڤ ناڤە یێ هەی، ئێکێ دی تاقی بکە.");
+            } else {
+                database.ref('users/' + u).set({
+                    password: p, balance: 0, status: "online", lastSeen: Date.now()
+                }).then(() => {
+                    localStorage.setItem("krd_session", u);
+                    loadUser(u);
+                });
+            }
+        });
+    }
+
+    function handleLogin() {
+        let u = document.getElementById('l-user').value.trim();
+        let p = document.getElementById('l-pass').value.trim();
+        if(!u || !p) return alert("تکایە هەمی خانان تژی بکە");
+        
+        database.ref('users/' + u).once('value', (snap) => {
+            if(snap.exists() && snap.val().password === p) {
+                localStorage.setItem("krd_session", u);
+                loadUser(u);
+            } else {
+                alert("ناڤ یان پاسوۆرد خەلەتە!");
+                document.getElementById('login-form').style.animation = 'shake 0.4s ease';
+                setTimeout(() => { document.getElementById('login-form').style.animation = ''; }, 400);
+            }
+        });
+    }
+
+    function loadUser(u) {
+        activeUser = u;
+        document.getElementById('auth-screen').style.display = 'none';
+        document.getElementById('main-interface').style.display = 'block';
+        document.getElementById('display-user-name').innerText = u;
+        
+        database.ref('users/' + u).on('value', (snap) => {
+            if(snap.exists()){
+                bal = snap.val().balance || 0;
+                let uiBal = document.getElementById('ui-bal');
+                if(uiBal) uiBal.innerText = bal.toLocaleString();
+            }
+        });
+
+        database.ref('.info/connected').on('value', (snapshot) => {
+            if (snapshot.val() === true) {
+                let statusRef = database.ref('users/' + u + '/status');
+                statusRef.onDisconnect().set('offline').then(() => statusRef.set('online'));
+            }
+        });
+
+        myOrders = JSON.parse(localStorage.getItem("krd_o_" + u)) || [];
+        drawOrders();
+    }
+
+    function logout() {
+        if(activeUser) database.ref('users/' + activeUser + '/status').set('offline');
+        localStorage.removeItem("krd_session");
+        location.reload();
+    }
+
+    function navigate(tab) {
+        ['home', 'orders', 'deposit', 'profile'].forEach(t => {
+            let el = document.getElementById('tab-'+t);
+            if(el) el.style.display = 'none';
+        });
+        document.getElementById('tab-'+tab).style.display = 'block';
+        document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+        document.getElementById('nav-'+tab).classList.add('active');
+        if(tab === 'home') closeCategory();
+    }
+
+    function openCategory(c) {
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('category-view').style.display = 'block';
+        let list = document.getElementById('items-list');
+        document.getElementById('cat-label').innerText = c.toUpperCase() + " Services";
+        
+        const services = {
+            fb: [{n: "Facebook Followers", p: 2000, i: 101, g: "30 رۆژ گرنتی", c: "1.2k+"}, {n: "Facebook Likes", p: 500, i: 102, g: "بێ گرنتی", c: "5.4k+"}],
+            ig: [{n: "Instagram Followers", p: 4000, i: 201, g: " روژ گرنتی30", c: "10k+"}, {n: "Instagram Likes", p: 750, i: 203, g: "مسۆگەر", c: "25k+"}, {n: "Reels Views", p: 150, i: 202, g: "خێرا", c: "100k+"}],
+            tk: [{n: "TikTok Followers", p: 3500, i: 301, g: "30 رۆژ گرنتی", c: "8k+"}, {n: "TikTok Likes", p: 500, i: 303, g: "مسۆگەر", c: "15k+"}, {n: "TikTok Views", p: 100, i: 302, g: "بێ سنور", c: "1M+"}],
+            tg: [{n: "Telegram Members", p: 1750, i: 401, g: "مانگەک گرنتی", c: "3k+"}, {n: "Post Views", p: 400, i: 402, g: "هەمیشەیی", c: "50k+"}]
+        };
+        
+        list.innerHTML = services[c].map(s => `
+            <div class="glass-box item-row" onclick="openOrderForm('${s.n}', ${s.p}, ${s.i})">
+                <div class="service-info">
+                    <span style="font-weight:bold;">${s.n} <small>(1k = ${s.p} IQD)</small></span>
+                    <div style="display:flex; gap:5px;">
+                        <span class="delivery-badge"><i class="fa-solid fa-bolt"></i> خێرا</span>
+                        <span class="guarantee-badge"><i class="fa-solid fa-shield-check"></i> ${s.g}</span>
+                        <span class="buy-count-tag"><i class="fa-solid fa-cart-shopping"></i> ${s.c} کڕین</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-circle-chevron-left" style="color: var(--primary);"></i>
+            </div>
+        `).join('');
+    }
+
+    function closeCategory() {
+        document.getElementById('home-view').style.display = 'block';
+        document.getElementById('category-view').style.display = 'none';
+        document.getElementById('order-view').style.display = 'none';
+    }
+
+    function openOrderForm(n, p, i) {
+        document.getElementById('order-view').style.display = 'block';
+        document.getElementById('order-name').innerText = n;
+        document.getElementById('order-rate').innerText = p;
+        document.getElementById('order-id').innerText = "ID: " + i;
+        document.getElementById('inp-qty').value = "";
+        document.getElementById('total-val').innerText = "0";
+    }
+
+    function calculateTotal() {
+        let r = parseInt(document.getElementById('order-rate').innerText);
+        let q = parseInt(document.getElementById('inp-qty').value) || 0;
+        document.getElementById('total-val').innerText = Math.round((q/1000)*r).toLocaleString();
+    }
+
+    function submitOrder() {
+        let r = parseInt(document.getElementById('order-rate').innerText);
+        let q = parseInt(document.getElementById('inp-qty').value);
+        let l = document.getElementById('inp-link').value;
+        let cost = (q / 1000) * r;
+
+        if(q < 1000) return alert(langData[curLang].err_min_qty);
+        if(!l || isNaN(q)) return alert("زانیاریان تژی بکە!");
+        if(bal < cost) return alert("بالانسێ تە بەس نینە!");
+        
+        database.ref('users/' + activeUser + '/balance').set(bal - cost);
+
+        let newOrder = { 
+            id: Date.now(), user: activeUser, name: document.getElementById('order-name').innerText, 
+            qty: q, link: l, sent: 0, status: "Running", date: new Date().toLocaleString() 
+        };
+
+        myOrders.unshift(newOrder);
+        localStorage.setItem("krd_o_" + activeUser, JSON.stringify(myOrders));
+        database.ref('orders').push(newOrder);
+        navigate('orders');
+        drawOrders();
+    }
+
+    function drawOrders() {
+        let box = document.getElementById('my-orders-list');
+        if(!box) return;
+        if(myOrders.length === 0) { box.innerHTML = `<p style="text-align:center; padding:50px; opacity:0.3;">داخوازی نینن!</p>`; return; }
+        box.innerHTML = myOrders.map(o => `
+            <div class="glass-box order-card">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <b style="color:var(--primary);">${o.name}</b>
+                    <span style="font-size:10px; padding:3px 8px; border-radius:5px; background:${o.status==='Running'?'rgba(255,174,0,0.2)':'rgba(76,175,80,0.2)'}; color:${o.status==='Running'?'#ffae00':'#4caf50'};">${o.status}</span>
+                </div>
+                <div class="progress-container"><div class="progress-bar" style="width:${(o.sent/o.qty)*100}%"></div></div>
+                <div style="display:flex; justify-content:space-between; font-size:11px; opacity:0.5;">
+                    <span>گەهشتن: ${o.sent} / ${o.qty}</span>
+                    <span>${o.date}</span>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function selectPay(m) {
+        method = m;
+        document.querySelectorAll('.pay-box').forEach(b => b.classList.remove('active'));
+        let payEl = document.getElementById('p-'+m.toLowerCase());
+        if(payEl) payEl.classList.add('active');
+    }
+
+    function requestDep(plat) {
+        let val = parseInt(document.getElementById('dep-amount').value);
+        if(val < 5000) return alert("کێمترین بڕ ٥٠٠٠ دینارە!");
+        let msg = `سڵاو ئەدمین%0Aدەمەوێت باڵانس زیاد بکەم%0A👤 ناڤ: ${activeUser}%0A💰 بڕ: ${val.toLocaleString()} IQD%0A💳 ڕێگا: ${method}`;
+        if (plat === 'wa') window.open(`https://wa.me/9647503388976?text=${msg}`);
+        else window.open(`https://t.me/krdfollow1?text=${msg}`);
+    }
+
+    function accessAdmin() {
+        let key = prompt("کۆدێ ئەدمینی بنڤیسە:");
+        if(key === "Ss112233Ss$&$&") { 
+            document.getElementById('admin-panel').style.display = 'block';
+            refreshAdminUserList();
+            refreshAdminRequestList();
+        } else { alert("کۆد خەلەتە!"); }
+    }
+
+    function refreshAdminUserList() {
+        database.ref('users').on('value', (snapshot) => {
+            let allUsers = snapshot.val();
+            let listDiv = document.getElementById('admin-user-list');
+            if(!allUsers || !listDiv) return;
+            let html = "";
+            for(let u in allUsers) {
+                let statusClass = allUsers[u].status === 'online' ? 'online' : 'offline';
+                html += `<div class="user-list-item" onclick="document.getElementById('adm-user').value='${u}'">
+                    <span>${u} <span class="status-dot ${statusClass}"></span></span>
+                    <span style="color: var(--secondary);">${parseInt(allUsers[u].balance || 0).toLocaleString()} IQD</span>
+                </div>`;
+            }
+            listDiv.innerHTML = html;
+        });
+    }
+
+    function refreshAdminRequestList() {
+        database.ref('orders').limitToLast(10).on('value', (snapshot) => {
+            let globalRequests = snapshot.val();
+            let listDiv = document.getElementById('admin-request-list');
+            if(!globalRequests || !listDiv) return;
+            let html = "";
+            let totalOrders = 0;
+            for(let key in globalRequests) {
+                totalOrders++;
+                let r = globalRequests[key];
+                html += `<div class="req-item">
+                    <div style="color:var(--secondary); font-weight:bold;">${r.user}</div>
+                    <div>${r.name} (${r.qty})</div>
+                    <div style="word-break:break-all; color:var(--primary); font-size:10px;">${r.link}</div>
+                </div>`;
+            }
+            listDiv.innerHTML = `<p style="font-size:10px; color:var(--success); text-align:center;">کۆمە داخوازیێن سیستەمی: ${totalOrders}</p>` + html;
+        });
+    }
+
+    function adminAddMoney() {
+        let targetUser = document.getElementById('adm-user').value.trim();
+        let amountToAdd = parseInt(document.getElementById('adm-amt').value);
+        if(!targetUser || isNaN(amountToAdd)) return alert("ناڤ یان بڕ خەلەتە!");
+        database.ref('users/' + targetUser + '/balance').transaction(curr => (curr || 0) + amountToAdd);
+        alert("پارە بۆ " + targetUser + " زێدە بوو!");
+    }
+</script>
+</body>
+</html>
